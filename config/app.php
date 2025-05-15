@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Modules\Order\Providers\OrderServiceProvider;
+use Modules\Product\Providers\ProductServiceProvider;
+use Modules\Shipment\Providers\ShipmentServiceProvider;
 
 return [
 
@@ -159,7 +162,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+ 
         /*
          * Application Service Providers...
          */
@@ -168,6 +171,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        OrderServiceProvider::class,
+        ProductServiceProvider::class,
+        ShipmentServiceProvider::class
     ])->toArray(),
 
     /*
